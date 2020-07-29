@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    #LOGO
+\*------------------------------------*/
+
+.c-header__logo {
+  display: flex;
+  width: 42px;
+  height: 36px;
+  margin: $space-half 0;
+  text-decoration: none;
+  font-weight: 500;
+  align-items: center;
+  @media all and (min-width: $bp-med) {
+    width: auto;
+  }
+  svg {
+    fill: #fff;
+    width: 100%;
+    height: 100%;
+    @media all and (min-width: $bp-med) {
+      width: auto;
+    }
+  }
+  span {
+    display: none;
+    color: $color-white;
+    text-decoration: none;
+    margin-left: 8px;
+    @media all and (min-width: $bp-med) {
+      display: inline;
+    }
+  }
+}

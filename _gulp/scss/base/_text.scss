@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    #TEXT
+\*------------------------------------*/
+
+/**
+ * Paragraph base styles
+ */
+p {
+	margin-bottom: $space;
+}
+
+/**
+ * Blockquote base styles
+ */
+blockquote {
+    font-style:italic;
+    border-left: 1px solid $color-text;
+    color: $color-text;
+	padding-left: $pad;
+	margin-bottom: $space;
+}
+
+/**
+ * Horizontal rule base styles
+ */
+hr {
+	border: 0;
+    height: 2px;
+    background: $color-text;
+    margin: $space-double 0;
+}
+
+/**
+ * Abbreviation base styles
+ */
+abbr {
+    border-bottom: 1px dotted $color-text;
+    cursor: help;
+}
+
+sup {
+    line-height: 0.25rem;
+    font-size: 0.75rem;
+}

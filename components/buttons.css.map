@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/buttons.scss"],"names":[],"mappings":"AAAA,KACE,oBAAqB,CACrB,YACE,4BAA6B,CAE/B,aACE,UAAW,CACX,WAAY","file":"buttons.css","sourcesContent":[".btn {\n  display: inline-block;\n  &--clear {\n    background-color: transparent;\n  }\n  &--search {\n    width: 45px;\n    height: 45px;\n  }\n}"]}

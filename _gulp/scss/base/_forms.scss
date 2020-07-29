@@ -1,0 +1,90 @@
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+
+/**
+ * Fieldset base styles
+ */
+ fieldset {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+/**
+ * Label base styles
+ */
+label {
+	display: block;
+	padding-bottom: 0.2rem;
+	font-weight: bold;
+}
+
+/**
+ * Form button, input, select, and text area base styles
+ * 1) Zero out margin and inherit font styles
+ */
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+}
+
+/**
+ * Input and text area base styles
+ * 1) Width entire container, gray border, padding
+ */
+input, textarea {
+	width: 100%;
+	// border: 1px solid $color-gray-35;
+	border: none;
+	// border-radius: $border-radius;
+	padding: $pad-half $pad;
+	margin-bottom: $space;
+}
+
+/**
+ * Input areas base styles
+ * 1) Get rid of webkit appearance of these areas
+ */
+input[type=text], input[type=search], input[type=url], input[type=number], textarea {
+	-webkit-appearance: none;
+}
+
+/**
+ * Button/Submit button base styles
+ */
+button, input[type="submit"] {
+	// padding: $pad-half;
+	// background: $gradient-brand-secondary;
+	// border: 1px solid $color-gray-50;
+	border: none;
+	// color: $color-white;
+	cursor: pointer;
+	&:hover {
+		// background: $gradient-brand-tertiary;
+	}
+}
+
+/**
+ * Checkboxes/Radio button base styles
+ */
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    margin-right: 0.3em;
+}
+
+/**
+ * Search cancel button and search decoration webkit appearance none
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-input-placeholder { font-family: $font-primary; font-size: 0.75rem; color: $color-text-subtle; letter-spacing: 0.1px;}
+::-moz-placeholder { font-family: $font-primary; font-size: 0.75rem; color: $color-text-subtle; letter-spacing: 0.1px;} 
+:-ms-input-placeholder { font-family: $font-primary; font-size: 0.75rem; color: $color-text-subtle; letter-spacing: 0.1px;}
+input:-moz-placeholder { font-family: $font-primary; font-size: 0.75rem; color: $color-text-subtle; letter-spacing: 0.1px;}
+.placeholder { font-family: $font-primary; font-size: 0.75rem; color: $color-text-subtle; letter-spacing: 0.1px;}

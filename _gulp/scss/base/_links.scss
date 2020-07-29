@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+
+/**
+ * Links
+ */
+a {
+	color: $color-brand-secondary;
+	outline: 0;
+
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+}

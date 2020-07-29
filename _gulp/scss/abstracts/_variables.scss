@@ -1,0 +1,117 @@
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
+
+/*------------------------------------*\
+    #COLORS
+\*------------------------------------*/
+
+/*
+ * 1) Color variables are in a two-tier system to keep colors in sync. The
+ *    first tier defines the brand colors, and the second tier
+ *    defines the application of those colors.
+ */
+
+/*
+ * Brand Colors
+ * 1) Brand color variables use English names to define colors to make palettes easier to
+ *    identify. Names are generated using this tool: http://chir.ag/projects/name-that-color/
+ * 2) Brand color variables should typically not be used directly in Sass partials. Instead, use
+ *    second-tier application colors.
+ *
+ */
+
+
+$color-brand-burnt-orange: #CC4B00;
+$color-brand-supernova: #FFC700;
+$color-brand-blue-ribbon: #006EF5;
+$color-brand-cobalt: #004EAE;
+$color-brand-midnight-blue: #013371;
+
+$color-brand-boulder: #767676;
+$color-brand-mine-shaft: #333333;
+
+
+$color-white: #fff;
+$color-black: #000;
+
+
+/* Brand Colors Applied Here */
+$color-brand-primary: $color-brand-cobalt;
+$color-brand-primary-light: $color-brand-blue-ribbon;
+$color-brand-primary-dark: $color-brand-midnight-blue;
+
+//  Link Color, Button Color, etc. 
+$color-brand-secondary:  $color-brand-burnt-orange;
+$color-brand-tertiary:  $color-brand-supernova;
+
+/*
+* Text Colors
+* 1) These are non-linked text colors, such as body copy.
+*/
+$color-text: $color-brand-mine-shaft;
+$color-text-subtle: $color-brand-boulder;
+
+
+/*
+ * Text Link Colors
+ * 1) These are for linked text, such as a link found within an article,
+ *    navigation link, footer link, etc.
+ */
+$color-text-link:  $color-brand-secondary;
+
+
+.has-white-color{ color: $color-white; }
+.has-burnt-orange-color{ color: $color-brand-burnt-orange; }
+.has-supernova-color{ color: $color-brand-supernova; }
+.has-blue-ribbon-color{ color: $color-brand-blue-ribbon; }
+.has-cobalt-color{ color: $color-brand-cobalt; }
+.has-midnight-blue-color{ color: $color-brand-midnight-blue; }
+.has-boulder-color{ color: $color-brand-boulder; }
+.has-mine-shaft-color{ color: $color-brand-mine-shaft; }
+ 
+.has-bg-color-primary-light {
+  background-color: $color-brand-primary-light;
+  svg {
+    fill: #fff;
+  }
+}
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+
+$font-primary: 'Raleway', sans-serif;
+
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+$l-max-width: 1360px;
+
+/**
+ * Spacing Defaults
+ */
+$space : 10px;
+$space-and-half : $space*1.5;
+$space-double : $space*2;
+$space-quad : $space*4;
+$space-half : $space/2;
+$pad : 10px;
+$pad-and-half : $pad*1.5;
+$pad-and-quarter : $pad*1.5;
+$pad-double : $pad*2;
+$pad-triple : $pad*3;
+$pad-half : $pad/2;
+$pad-quarter :$pad/4;
+
+
+/*------------------------------------*\
+    #BREAKPOINTS
+\*------------------------------------*/
+
+/**
+ * Breakpoints
+ */
+ $bp-small : 360px;
+ $bp-med : 1024px;
+ $bp-large : 1200px;

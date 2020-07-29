@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    #PRIMARY NAVIGATION
+\*------------------------------------*/
+
+/**
+ * Navigation tag
+ */
+ .c-primary-nav {
+   background-color: $color-brand-primary;
+   &__list {
+     display: none;
+     @media all and (min-width: $bp-med) {
+       display: flex;
+       align-items: flex-start;
+       max-width: $l-max-width;
+       margin: 0 auto;
+       width: 90%;
+     }
+     &.active {
+       display: block;
+     }
+   }
+   li {
+     border-top: 1px solid #5488c8;
+     @media all and (min-width: $bp-med) {
+      border: none;
+    }
+     &:first-child {
+       border-width: 0;
+     }
+     &.current-menu-item, &:hover {
+       background-color: $color-brand-primary-dark;
+       a {
+        color: $color-brand-tertiary;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+     }
+   }
+  a {
+    padding: 12px 20px;
+    display: block;
+    color: $color-white;
+    font-size: 18px;
+    
+  }
+}

@@ -1,0 +1,162 @@
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+// $min_width: 320px;
+// $max_width: 2000px;
+// $min_font: 16px;
+// $max_font: 24px;
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-primary;
+	color: $color-text;
+}
+
+/**
+ * Heading 1
+ */
+ h1, .h1 {
+	line-height: 1.2;
+	// font-weight: 300;
+	// text-transform: uppercase;
+	margin-bottom: 1rem;
+	span {
+		display: block;
+	}
+}
+
+/**
+* Heading 2
+*/
+h2, .h2 {
+	line-height: 1.2;
+	// font-weight: 500;
+	// text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+
+/**
+* Heading 3
+*/
+h3, .h3 {
+line-height: 1.2;
+// font-weight: 500;
+margin-bottom: 1rem;
+}
+
+/**
+* Heading 4
+*/
+h4, .h4 {
+// font-weight: 500;
+}
+
+/**
+* Heading 5
+*/
+h5, .h5 {
+line-height: 1.87;
+// font-weight: 500;
+}
+
+/**
+* Heading 6
+*/
+h6, .h6 {
+// font-weight: 500;
+}
+
+@function calc-interpolation($min-screen, $min-value, $max-screen, $max-value) {
+	$a: ($max-value - $min-value) / ($max-screen - $min-screen);
+	$b: $min-value - $a * $min-screen; 
+
+	$sign: "+";
+	@if ($b < 0) {
+			$sign: "-";
+			$b: abs($b);
+	}
+
+	@return calc(#{$a*100}vw #{$sign} #{$b});
+}
+
+@mixin fluid-type($properties, $min-screen, $max-screen, $min-value, $max-value) {
+& {
+	@each $property in $properties {
+		#{$property}: $min-value;
+	}
+
+	@media screen and (min-width: $min-screen) {
+		@each $property in $properties {
+			#{$property}: calc-interpolation($min-screen, $min-value, $max-screen, $max-value); 
+		}
+	}
+
+	@media screen and (min-width: $max-screen) {
+		@each $property in $properties {
+			#{$property}: $max-value;
+		}
+	}
+}
+}
+
+// Change scale
+// Calculate Modular Scale
+// You don't need to calculate this with Sass 
+// You can use values from http://type-scale.com/
+// Or random values :)
+
+$h1-min: 1.875rem;
+$h1-max: 2.25rem;
+
+$h2-min: 1.875rem;
+$h2-max: 2.25rem;
+
+$h3-min: 1.25rem;
+$h3-max: 1.5rem;
+
+$h4-min: 1.125rem;
+$h4-max: 1.25rem;
+
+$h5-min: 1rem;
+$h5-max: 1.125rem;
+
+$h6-min: 1rem;
+$h6-max: 1rem;
+
+
+// Apply fluid type mixin
+
+h1, .h1 { 
+	@include fluid-type(font-size, 24rem, 99rem, $h1-min, $h1-max);
+}
+
+h2, .h2 { 
+  font-size: 36px;
+}
+
+h3, .h3 { 
+	@include fluid-type(font-size, 24rem, 99rem, $h3-min, $h3-max);
+}
+
+h4, .h4 { 
+	@include fluid-type(font-size, 24rem, 99rem, $h4-min, $h4-max);
+}
+
+h5, .h5 { 
+	@include fluid-type(font-size, 24rem, 99rem, $h5-min, $h5-max);
+}
+
+h6, .h6 {	
+	@include fluid-type(font-size, 24rem, 99rem, $h6-min, $h6-max);
+}
+
+
+
+
+/**
+* Subheading
+*/
+.subheading {
+display: block;
+font-size: 1.5rem;
+font-weight: 100;
+}
